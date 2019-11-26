@@ -63,3 +63,6 @@ export default {
 ## Todo-List
 - [ ] Make more generic.
 - [ ] Publish on npm.
+
+## License
+[MIT](https://github.com/hv7214/Salary-Slider-Component/blob/master/LICENSE)
