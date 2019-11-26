@@ -24,7 +24,7 @@ export default {
           selectedColor: "white",
           selectedBackgroundColor: "green",
           borderColor: "black",
-          fontFamily: "Arial",
+          fontFamily: "Courier",
           fontWeight: "normal",
           fontWeightSelected: "bold",
           squareCorners: false,

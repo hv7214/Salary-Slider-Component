@@ -40,6 +40,8 @@ export default {
 #scale {
   display: flex;
   justify-content: space-between;
+  font-size: 1.3em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-right: 100px;
 }
 </style>
