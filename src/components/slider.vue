@@ -6,6 +6,7 @@
       :contained="true"
       :min="min"
       :max="max"
+      :enable-cross="cross"
     ></vue-slider>
   </div>
 </template>
@@ -30,8 +31,9 @@ export default {
       min: 10,
       max: 100,
       value: [10, 100],
-      dotSize: 15,
-      width: 26
+      dotSize: 16,
+      width: 26,
+      cross: false
     };
   },
   watch: {
