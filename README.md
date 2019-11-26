@@ -6,6 +6,11 @@
 
 >🎚Salary range slider component made on Vuejs.
 
+## ✨ Features
+- Switch toggles between USD and INR.
+- Scale changes on toggle.
+- Stylish Tooltip.
+
 ## 🎯 Props and Events
 There are three props for the component: 
   * **leftptr(Number)**  : Denotes left dot value.
@@ -18,6 +23,8 @@ There are three props for the component:
 
 ## 🚀 Usage
    > Download the source code. <br>
+   > `cd salary-slider`. <br>
+   > Run `npm install .` <br>
    > Import **SalarySlider** from **path/to/folder/src/main**.
    
    ```vue
