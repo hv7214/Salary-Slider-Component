@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div id="head">
-      <div id="slider"><Slider :currency="currency" /></div>
+      <div id="slider">
+        <Slider :currency="currency" @valuechange="updatePtr" />
+      </div>
       <div id="switch"><Toggle @currencyupdate="currencychange" /></div>
     </div>
     <Scale :currency="currency" />
@@ -22,14 +24,18 @@ export default {
   },
   data() {
     return {
-      min: 10,
-      max: 100,
+      leftptr: 10,
+      rightptr: 100,
       currency: "INR"
     };
   },
   methods: {
     currencychange(newcurrency) {
       this.currency = newcurrency;
+    },
+    updatePtr(lptr, rptr) {
+      this.leftptr = lptr;
+      this.rightptr = rptr;
     }
   }
 };

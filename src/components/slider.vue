@@ -24,6 +24,16 @@ export default {
       type: String,
       required: false,
       default: "INR"
+    },
+    leftptr: {
+      type: Number,
+      required: false,
+      default: 10
+    },
+    rightptr: {
+      type: Number,
+      required: false,
+      default: 100
     }
   },
   data: function() {
@@ -37,6 +47,9 @@ export default {
     };
   },
   watch: {
+    value: function() {
+      this.$emit("valuechange", this.value[0], this.value[1]);
+    },
     currency: function() {
       var originalAmt1 = this.value[0];
       var originalAmt2 = this.value[1];
