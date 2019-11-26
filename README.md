@@ -53,5 +53,8 @@ export default {
   }
 };
 </script>
-
   ```
+
+## Todo-List
+- [x] Make more generic
+- [x] Publish on npm
