@@ -1,11 +1,11 @@
 {
   "main": "./dist/salaryslider.common.js",
   "name": "salary-slider",
-  "version": "0.1.7",
+  "version": "0.2.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name salary-slider ./src/main.js",
+    "build-bundle": "vue-cli-service build --target lib --name salaryslider ./src/main.js",
     "lint": "vue-cli-service lint"
   },
   "files": [

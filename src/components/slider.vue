@@ -15,10 +15,18 @@
 <script>
 import VueSlider from "vue-slider-component";
 import "vue-slider-component/theme/material.css";
+
 export default {
   name: "Slider",
   components: {
     VueSlider
+  },
+  props: {
+    currency: {
+      type: String,
+      required: false,
+      default: "INR"
+    }
   },
   data: function() {
     return {
@@ -39,7 +47,7 @@ export default {
       var originalAmt1 = this.value[0];
       var originalAmt2 = this.value[1];
       var convertedAmt1, convertedAmt2;
-      if (this.currency == "INR") {
+      if (this.currency === "INR") {
         this.min = 10;
         this.max = 100;
         convertedAmt1 = this.convertToRupees(originalAmt1, true);
