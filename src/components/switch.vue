@@ -1,5 +1,5 @@
 <template>
-  <div id="switch">
+  <div id="switchbar">
     <toggle-switch
       :options="myOptions"
       :disabled="false"
@@ -16,7 +16,7 @@ export default {
   components: { ToggleSwitch },
   data() {
     return {
-      currency: "Rupees",
+      currency: "INR",
       myOptions: {
         layout: {
           color: "black",
@@ -34,15 +34,15 @@ export default {
           fontSize: 1,
           height: 2,
           padding: 0.5,
-          width: 9.2
+          width: 6
         },
         items: {
           delay: 0.35,
-          preSelected: "Rupees",
+          preSelected: "INR",
           disabled: false,
           labels: [
-            { name: "Rupees", color: "white", backgroundColor: "green" },
-            { name: "Dollars", color: "black", backgroundColor: "gold" }
+            { name: "INR", color: "white", backgroundColor: "green" },
+            { name: "USD", color: "black", backgroundColor: "gold" }
           ]
         }
       }

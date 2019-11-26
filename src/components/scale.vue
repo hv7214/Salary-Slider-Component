@@ -1,5 +1,5 @@
 <template>
-  <div id="scale" v-bind:style="{ width: width + 'em' }">
+  <div id="scale" v-bind:style="{ width: width + '%' }">
     <div id="start">{{ minSalary }}</div>
     <div id="end">{{ maxSalary }}</div>
   </div>
@@ -11,23 +11,23 @@ export default {
   props: {
     currency: {
       required: true,
-      default: "Rupees",
+      default: "INR",
       type: String
     }
   },
   data() {
     return {
       minSalary: "10",
-      maxSalary: "1Cr",
-      width: 27
+      maxSalary: "1 Cr",
+      width: 66
     };
   },
   watch: {
     currency: function() {
-      if (this.currency === "Rupees") {
+      if (this.currency === "INR") {
         this.minSalary = "10";
-        this.maxSalary = "1Cr";
-      } else if (this.currency === "Dollars") {
+        this.maxSalary = "1 Cr";
+      } else if (this.currency === "USD") {
         this.minSalary = "50000";
         this.maxSalary = "5000000";
       }

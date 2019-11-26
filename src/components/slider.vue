@@ -1,14 +1,12 @@
 <template>
-  <div class="slider" v-bind:style="{ width: width + 'em' }">
-    <div id="vs">
-      <vue-slider
-        v-model="value"
-        :dot-size="dotSize"
-        :contained="true"
-        :min="min"
-        :max="max"
-      ></vue-slider>
-    </div>
+  <div id="slider" v-bind:style="{ width: width + 'em' }">
+    <vue-slider
+      v-model="value"
+      :dot-size="dotSize"
+      :contained="true"
+      :min="min"
+      :max="max"
+    ></vue-slider>
   </div>
 </template>
 
@@ -24,7 +22,7 @@ export default {
     currency: {
       type: String,
       required: false,
-      default: "Rupees"
+      default: "INR"
     }
   },
   data: function() {
@@ -33,7 +31,7 @@ export default {
       max: 100,
       value: [10, 100],
       dotSize: 15,
-      width: 30
+      width: 26
     };
   },
   watch: {
@@ -41,12 +39,12 @@ export default {
       var originalAmt1 = this.value[0];
       var originalAmt2 = this.value[1];
       var convertedAmt1, convertedAmt2;
-      if (this.currency == "Rupees") {
+      if (this.currency == "INR") {
         this.min = 10;
         this.max = 100;
         convertedAmt1 = this.convertToRupees(originalAmt1);
         convertedAmt2 = this.convertToRupees(originalAmt2);
-      } else if (this.currency === "Dollars") {
+      } else if (this.currency === "USD") {
         this.min = 50000;
         this.max = 5000000;
         convertedAmt1 = this.convertToDollars(originalAmt1);
@@ -56,22 +54,20 @@ export default {
     }
   },
   methods: {
-    convertToDollars(rupees) {
-      return (rupees * 100000) / 71.69 > 5000000
+    convertToDollars(INR) {
+      return (INR * 100000) / 71.69 > 5000000
         ? 5000000
-        : (rupees * 100000) / 71.69;
+        : (INR * 100000) / 71.69;
     },
-    convertToRupees(dollars) {
-      return (dollars * 71.69) / 100000 > 100
-        ? 100
-        : (dollars * 71.69) / 100000;
+    convertToRupees(USD) {
+      return (USD * 71.69) / 100000 > 100 ? 100 : (USD * 71.69) / 100000;
     }
   }
 };
 </script>
 
 <style scoped>
-#vs {
+#slider {
   margin-top: 50px;
   margin-right: 50px;
 }

@@ -24,7 +24,7 @@ export default {
     return {
       min: 10,
       max: 100,
-      currency: "rupees"
+      currency: "INR"
     };
   },
   methods: {
@@ -37,13 +37,14 @@ export default {
 
 <style>
 #app {
-  width: 50em;
+  width: 40em;
   position: relative;
 }
 #head {
   display: flex;
 }
 #switch {
-  margin-top: 22px;
+  width: 20%;
+  margin-top: 40px;
 }
 </style>
