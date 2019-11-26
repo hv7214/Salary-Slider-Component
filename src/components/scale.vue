@@ -47,7 +47,6 @@ export default {
 
 #start,
 #end {
-  background-color: blanchedalmond;
-  border-radius: 50%;
+  background-color: rgb(238, 255, 249);
 }
 </style>
