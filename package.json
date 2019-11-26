@@ -1,7 +1,7 @@
 {
   "main": "./dist/salaryslider.common.js",
   "name": "salary-slider",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
