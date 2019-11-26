@@ -6,8 +6,8 @@
 
 >🎚Salary range slider component made on Vuejs.
 
-## 🚀 Usage
-  There are three parameters for the component: 
+## 🎯 Props and Events
+There are three props for the component: 
   * **leftptr(Number)**  : Denotes left dot value.
   * **righptr(Number)**  : Denotes right dot value.
   * **currency(String)** : Denotes currency (USD/INR).
@@ -15,7 +15,12 @@
   And, there are two events:
   * **changeptr**       : fired when dot values are changed.
   * **changecurrency**  : fired when currency value change by toggling.
-  ```vue
+
+## 🚀 Usage
+   > Download the source code. <br>
+   > Import **SalarySlider** from **path/to/folder/src/main**.
+   
+   ```vue
   <template>
   <div id="app">
     <SalarySlider
