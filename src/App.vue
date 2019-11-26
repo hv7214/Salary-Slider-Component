@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="head">
+      <div id="slider"><Slider :currency="currency" /></div>
+      <div id="switch"><Toggle @currencyupdate="currencychange" /></div>
+    </div>
+    <Scale :currency="currency" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Slider from "./components/slider";
+import Toggle from "./components/switch";
+import Scale from "./components/scale";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Slider,
+    Toggle,
+    Scale
+  },
+  data() {
+    return {
+      min: 10,
+      max: 100,
+      currency: "rupees"
+    };
+  },
+  methods: {
+    currencychange(newcurrency) {
+      this.currency = newcurrency;
+    }
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 50em;
+  position: relative;
+}
+#head {
+  display: flex;
+}
+#switch {
+  margin-top: 22px;
 }
 </style>
