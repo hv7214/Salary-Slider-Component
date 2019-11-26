@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/42354803/69659256-d22b7b00-10a3-11ea-8718-23b9a9a37ceb.gif" width="500"/>
 </p>
 
->🎚Salary range slider component made on Vuejs.
+>🎚Salary range slider component based on Vuejs.
 
 ## ✨ Features
 - Switch toggles between USD and INR.
