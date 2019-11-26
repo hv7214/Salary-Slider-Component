@@ -24,20 +24,32 @@ export default {
     Toggle,
     Scale
   },
-  data() {
-    return {
-      leftptr: 10,
-      rightptr: 100,
-      currency: "INR"
-    };
+  props: {
+    leftptr: {
+      type: Number,
+      required: false,
+      default: 10
+    },
+    rightptr: {
+      type: Number,
+      required: false,
+      default: 100
+    },
+    currency: {
+      type: String,
+      required: false,
+      default: "INR"
+    }
   },
   methods: {
     currencychange(newcurrency) {
       this.currency = newcurrency;
+      this.$emit("changecurrency", newcurrency);
     },
     updatePtr(lptr, rptr) {
       this.leftptr = lptr;
       this.rightptr = rptr;
+      this.$emit("changeptr", lptr, rptr);
     }
   }
 };

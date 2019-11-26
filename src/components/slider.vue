@@ -7,6 +7,7 @@
       :min="min"
       :max="max"
       :enable-cross="cross"
+      :min-range="range"
     ></vue-slider>
   </div>
 </template>
@@ -19,23 +20,6 @@ export default {
   components: {
     VueSlider
   },
-  props: {
-    currency: {
-      type: String,
-      required: false,
-      default: "INR"
-    },
-    leftptr: {
-      type: Number,
-      required: false,
-      default: 10
-    },
-    rightptr: {
-      type: Number,
-      required: false,
-      default: 100
-    }
-  },
   data: function() {
     return {
       min: 10,
@@ -43,7 +27,8 @@ export default {
       value: [10, 100],
       dotSize: 16,
       width: 26,
-      cross: false
+      cross: false,
+      range: 1
     };
   },
   watch: {
@@ -57,8 +42,8 @@ export default {
       if (this.currency == "INR") {
         this.min = 10;
         this.max = 100;
-        convertedAmt1 = this.convertToRupees(originalAmt1);
-        convertedAmt2 = this.convertToRupees(originalAmt2);
+        convertedAmt1 = this.convertToRupees(originalAmt1, true);
+        convertedAmt2 = this.convertToRupees(originalAmt2, false);
       } else if (this.currency === "USD") {
         this.min = 50000;
         this.max = 5000000;
@@ -74,8 +59,10 @@ export default {
         ? 5000000
         : (INR * 100000) / 71.69;
     },
-    convertToRupees(USD) {
-      return (USD * 71.69) / 100000 > 100 ? 100 : (USD * 71.69) / 100000;
+    convertToRupees(USD, flag) {
+      let max = 100;
+      if (flag) max = 99;
+      return (USD * 71.69) / 100000 > 100 ? max : (USD * 71.69) / 100000;
     }
   }
 };
