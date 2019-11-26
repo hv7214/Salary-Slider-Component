@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div id="salaryslider">
     <div id="head">
       <div id="slider">
         <Slider :currency="currency" @valuechange="updatePtr" />
       </div>
-      <div id="switch"><Toggle @currencyupdate="currencychange" /></div>
+      <div id="switch">
+        <Toggle @currencyupdate="currencychange" />
+      </div>
     </div>
     <Scale :currency="currency" />
   </div>
@@ -16,7 +18,7 @@ import Toggle from "./components/switch";
 import Scale from "./components/scale";
 
 export default {
-  name: "app",
+  name: "SalarySlider",
   components: {
     Slider,
     Toggle,
@@ -42,7 +44,7 @@ export default {
 </script>
 
 <style>
-#app {
+#salaryslider {
   width: 40em;
   position: relative;
 }
