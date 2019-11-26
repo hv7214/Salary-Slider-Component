@@ -56,5 +56,5 @@ export default {
   ```
 
 ## Todo-List
-- [x] Make more generic
-- [x] Publish on npm
+- [ ] Make more generic
+- [ ] Publish on npm
