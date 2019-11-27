@@ -25,7 +25,7 @@ export default {
   watch: {
     currency: function() {
       if (this.currency === "INR") {
-        this.minSalary = "10";
+        this.minSalary = "10 lakh";
         this.maxSalary = "1 Cr";
       } else if (this.currency === "USD") {
         this.minSalary = "50000";
