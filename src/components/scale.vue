@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      minSalary: "10",
+      minSalary: "10 lakh",
       maxSalary: "1 Cr",
       width: 66
     };
