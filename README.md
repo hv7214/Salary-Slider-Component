@@ -1,13 +1,14 @@
 # salary-slider
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/42354803/69659256-d22b7b00-10a3-11ea-8718-23b9a9a37ceb.gif" width="500"/>
+<img src="https://user-images.githubusercontent.com/42354803/69703799-3c7e0300-1118-11ea-8859-acca975d1f7b.gif" width="500"/>
 </p>
 
 >🎚Salary range slider component based on Vuejs.
 
 ## ✨ Features
 - Switch toggles between USD and INR.
+- Automatic conversion of dot values on toggling between USD and INR.
 - Scale changes on toggle.
 - Stylish Tooltip.
 
